@@ -29,20 +29,3 @@ variable ami_centos7 {
   }
 }
 
-variable sshkey {
-  type    = "map"
-  default = {
-    api     = "aeon"
-    private = "/Users/mehmet.kaysi/.ssh/id_rsa_outscale"
-  }
-}
-
-variable project {
-  default = "cloud_media"
-}
-
-variable ip_allowed {
-  type = "list"
-  default = ["93.3.142.97"]
-}
-

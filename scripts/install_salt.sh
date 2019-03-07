@@ -7,7 +7,7 @@ if [ -z $1 ]; then
   exit -1
 fi
 
-echo install salt-$1
+echo 'install salt-$1'
 yum install salt-$1 -y > /dev/null 2>&1
 echo 'enable salt-$1'
 systemctl enable salt-$1
