@@ -5,9 +5,7 @@ resource "osc_default_security_group" "default" {
     self      = true
     from_port = 22
     to_port   = 22
-    cidr_blocks = ["46.231.147.8/32"]
     cidr_blocks = ["10.0.0.0/16"]
-    cidr_blocks = ["88.142.199.80/32"]
     }
 
   egress {
