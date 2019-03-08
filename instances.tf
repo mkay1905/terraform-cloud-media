@@ -2,7 +2,7 @@ resource "osc_instance" "cloud-media-adm" {
   count                       = 1
   ami                         = "${var.ami_centos7["id"]}"
   availability_zone           = "${var.region}a"
-  instance_type               = "t2.medium"
+  instance_type               = "t2.large"
   key_name                    = "mehmet_outscale"
   subnet_id                   = "${osc_subnet.public_subnet_a.id}"
   private_ip                  = "10.0.0.50"
@@ -16,7 +16,7 @@ resource "osc_instance" "cloud-media-lb" {
   count                       = 1
   ami                         = "${var.ami_centos7["id"]}"
   availability_zone           = "${var.region}a"
-  instance_type               = "t2.small"
+  instance_type               = "t2.large"
   key_name                    = "mehmet_outscale"
   subnet_id                   = "${osc_subnet.public_subnet_a.id}"
   private_ip                  = "10.0.0.51"
