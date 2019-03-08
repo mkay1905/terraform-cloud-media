@@ -16,6 +16,9 @@ cat >> /etc/salt/master <<EOL
   file_roots:
     base:
      - /srv/salt-cloudmedia-repo
+  pillar_roots:
+  base:
+    - /srv/salt-cloudmedia-pillar
   auto_accept: True
 EOL
 elif [ $1 == 'minion' ];then
