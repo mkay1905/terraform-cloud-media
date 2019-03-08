@@ -25,7 +25,7 @@ resource "null_resource" "configure_adm" {
       "sudo mv /tmp/id_rsa /root/.ssh/ && sudo chmod 400 /root/.ssh/id_rsa && sudo chown root:root /root/.ssh/id_rsa",
       "sudo yum install epel-release -y",
       "sudo yum install htop vim tree git-core -y",
-      "sudo ssh-keyscan github.com >> /tmp/known_hosts && sudo chown root:root /tmp/known_hosts && sudo mv /tmp/known_hosts /root/.ssh/known_hosts && sudo git clone git@github.com:mkay1905/salt-cloudmedia-repo.git /srv/salt-cloudmedia-repo && sudo git clone git@github.com:mkay1905/salt-cloudmedia-repo.git /srv/salt-cloudmedia-pillar",
+      "sudo ssh-keyscan github.com >> /tmp/known_hosts && sudo chown root:root /tmp/known_hosts && sudo mv /tmp/known_hosts /root/.ssh/known_hosts && sudo git clone git@github.com:mkay1905/salt-cloudmedia-repo.git /srv/salt-cloudmedia-repo && sudo git clone git@github.com:mkay1905/salt-cloudmedia-pillar.git /srv/salt-cloudmedia-pillar",
       "sudo chmod +x /tmp/install_salt.sh",
       "sudo /tmp/install_salt.sh master osc-eu-adm",
       "sudo /tmp/install_salt.sh minion osc-eu-adm",
